@@ -17,12 +17,12 @@ function reload(arr) {
         let modal = document.querySelector('.popup-black')
         let modalId = document.querySelector('.idItem')
         let modalTitle = document.querySelector('.title')
-        
+        let img = document.querySelector('img')
         item.onclick = () => {
             modal.style.display = 'block'
             modalId.innerHTML = 'ID: ' + i.id
             modalTitle.innerHTML = 'Title: ' + i.title
-
+            img.src = i.thumbnailUrl
             setTimeout(() => {
                 modal.style.opacity = '1'
             }, 200)
